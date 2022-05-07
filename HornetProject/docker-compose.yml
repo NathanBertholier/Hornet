@@ -6,7 +6,7 @@ services:
       - "5432:5432"
     volumes:
       - "/volumes/postgresql/data:/var/lib/postgresql/data"
-      - "init.sql:/docker-entrypoint-initdb.d/"
+      - "/volumes/postgresql/init:/docker-entrypoint-initdb.d/"
     environment:
       POSTGRES_PASSWORD: root
       POSTGRES_USER: root
